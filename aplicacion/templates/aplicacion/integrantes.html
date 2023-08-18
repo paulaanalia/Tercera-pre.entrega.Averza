@@ -1,0 +1,25 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+  
+    
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+   <h1> Integrantes </h1>
+   {% for i in integrantes %}
+  
+   <div class="grid text-center">
+      <div class="g-col-6">{{i.nombre}}</div>
+      <div class="g-col-6">{{i.apellido}}</div>
+      <div class="g-col-6">{{i.profesion}}</div>
+    </div>
+   
+   {% endfor %}
+    
+{% endblock contenido %}

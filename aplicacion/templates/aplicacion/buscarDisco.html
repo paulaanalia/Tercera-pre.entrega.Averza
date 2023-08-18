@@ -1,0 +1,23 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+    Buscar Disco
+    
+{% endblock titulo %}
+   
+
+{% block contenido %}
+    
+<h2>Agregar Disco</h2>
+    
+   <form action="/buscar2" method="get">
+        {% csrf_token %}
+        <p>Buscar en discos: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+       
+    </form>
+
+{% endblock contenido %}

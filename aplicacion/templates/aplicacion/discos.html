@@ -1,0 +1,27 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+   {{titulo}}
+    
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+   <h1> Discografia </h1>
+   
+   
+   {% for d in discos %}
+  
+   <div class="grid text-center">
+      <div class="g-col-6">{{d.nombre}}</div>
+      <div class="g-col-6">{{d.anio}}</div>
+    </div>
+   
+   {% endfor %}
+       
+    
+{% endblock contenido %}

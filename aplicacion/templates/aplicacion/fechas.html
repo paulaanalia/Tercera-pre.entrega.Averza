@@ -1,0 +1,24 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+   
+    
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+   <h1> Fechas </h1>
+   {% for f in fechas %}
+  
+   <div class="grid text-center">
+      <div class="g-col-6">{{f.lugar}}</div>
+      <div class="g-col-6">{{f.dia_mes}}</div>
+    </div>
+
+    {% endfor %}
+    
+{% endblock contenido %}
